@@ -1,0 +1,17 @@
+                        <!DOCTYPE html>
+<html>
+<body>
+<img id="0" src="shirt.jpg" onclick="myfunction(this)" alt="View" style="width:304px;height:228px;">
+<img id="1" src="shirt.jpg" onclick="myfunction(this)" alt="View" style="width:304px;height:228px;">
+<img id="2" src="shirt.jpg" onclick="myfunction(this)" alt="View" style="width:304px;height:228px;">
+<div id="imag-content"><div>
+<script type="text/javascript">
+  
+  function myfunction(ref){
+  var content=["This is content 1","This is another content"," This is a last content entry"];
+var img=document.getElementById("imag-content");
+img.innerHTML=content[parseInt(ref.id)];
+}
+</script>
+</body>
+</html>

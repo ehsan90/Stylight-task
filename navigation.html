@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script type="javascript">
+var menu = document.getElementsByClassName("menu");
+var hamburger = document.getElementsByClassName("hamburger");
+
+console.log(menu);
+console.log(hamburger);
+
+</script>
+
+
+<style>
+
+.flex-container {
+ 	-webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */ 
+    display: -webkit-flex;
+    display: flex;
+    width: 600px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+
+
+@media all and (max-width: 1000px) and (min-width: 700px) and (min-width: 804px) {
+
+    .hamburger{
+     display: none;
+     max-height: 0;
+     overflow: hidden;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .menu{
+     display: none;
+     max-height: 0;
+     overflow: hidden;
+    }
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+ul > li { width:100px; float:left; }
+ul > li > ul { display:none; }
+ul > li:hover > ul { display:inline-block; }
+ul > li > ul { padding-left:5px; }
+
+
+</style>
+</head>
+<body>
+
+
+<div class="menu flex-container">
+  <ul>
+  
+<ul>
+  <li><a href="#link">Link</a></li>
+  <li><a href="#link">Link</a></li>
+  <li><a href="#link">Link</a></li>
+  <li><a href="#dropdown">Dropdown</a>
+  <ul> 
+  <li><a href="#sublink">SubLink</a></li>
+   <li><a href="#sublink">SubLink</a></li>
+  </ul>
+  </li>
+  <li><a href="#Dropdown">Dropdown</a>
+   <ul> 
+  <li><a href="#sublink">SubLink</a></li>
+   <li><a href="#sublink">SubLink</a></li>
+  </ul>
+   </li>
+   <li><input type="text" name="search" placeholder="Search.."></li>
+
+</ul>
+  </ul>
+</div> 
+
+<div style="display:inline-block">
+Content
+<button class="hamburger">&#9776;</button>
+</div>
+
+
+</body>
+</html>
